@@ -2,7 +2,7 @@
 Library for working with masks.
 
 ## Installation 
-Installation is done using the [`boss install`](https://github.com/code-en-code/MyMask) command:
+Installation is done using the [`boss install`](https://github.com/HashLoad/boss) command:
 ``` sh
 boss install https://github.com/code-en-code/MyMask
 ```
