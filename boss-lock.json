@@ -1,0 +1,22 @@
+{
+	"hash": "d41d8cd98f00b204e9800998ecf8427e",
+	"updated": "2024-03-19T00:28:11.2945177-03:00",
+	"installedModules": {
+		"https://github.com/code-en-code/mystring": {
+			"name": "mystring",
+			"version": "1.0.1",
+			"hash": "ec3a2cf1b902323e9c58a0005dca9102",
+			"artifacts": {},
+			"failed": false,
+			"changed": false
+		},
+		"https://github.com/code-en-code/mytype": {
+			"name": "mytype",
+			"version": "v1.0.2",
+			"hash": "6b752604a049178390ff71c052b38476",
+			"artifacts": {},
+			"failed": false,
+			"changed": false
+		}
+	}
+}

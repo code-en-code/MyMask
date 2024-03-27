@@ -1,0 +1,373 @@
+object CharacteristicView: TCharacteristicView
+  Size.Width = 400.000000000000000000
+  Size.Height = 600.000000000000000000
+  Size.PlatformDefault = False
+  object lytHeader: TLayout
+    Align = Top
+    Margins.Top = 10.000000000000000000
+    Margins.Bottom = 10.000000000000000000
+    Position.Y = 10.000000000000000000
+    Size.Width = 400.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object rctBgHeader: TRectangle
+      Align = Contents
+      Fill.Kind = None
+      Sides = [Bottom]
+      Size.Width = 400.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Color = xFFF2F2F2
+    end
+    object lytHeaderControls: TLayout
+      Align = Client
+      Padding.Left = 20.000000000000000000
+      Padding.Right = 40.000000000000000000
+      Size.Width = 400.000000000000000000
+      Size.Height = 43.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object btnBack: TButton
+        OnTap = btnBackTap
+        Align = MostLeft
+        Position.X = 20.000000000000000000
+        Size.Width = 20.000000000000000000
+        Size.Height = 43.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'arrowlefttoolbutton'
+        TabOrder = 1
+        OnClick = btnBackClick
+      end
+      object lblTitle: TLabel
+        Align = Client
+        AutoSize = True
+        StyledSettings = []
+        Size.Width = 320.000000000000000000
+        Size.Height = 43.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Poppins'
+        TextSettings.Font.Size = 20.000000000000000000
+        TextSettings.FontColor = xFF121212
+        TextSettings.HorzAlign = Center
+        Text = 'Caracter'#237'sticas'
+        TabOrder = 0
+      end
+    end
+    object lytHeaderProgress: TLayout
+      Align = Bottom
+      Position.Y = 43.000000000000000000
+      Size.Width = 400.000000000000000000
+      Size.Height = 5.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      object rctBgProgress: TRectangle
+        Align = Contents
+        Fill.Color = xFFECECEC
+        Size.Width = 400.000000000000000000
+        Size.Height = 5.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        object rctProgress: TRectangle
+          Align = Left
+          Fill.Color = xFFB6B6B6
+          Size.Width = 0.000000000000000000
+          Size.Height = 5.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Kind = None
+        end
+      end
+    end
+  end
+  object lytFooter: TLayout
+    Align = Bottom
+    Padding.Left = 40.000000000000000000
+    Padding.Right = 40.000000000000000000
+    Margins.Bottom = 20.000000000000000000
+    Position.Y = 532.000000000000000000
+    Size.Width = 400.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object btnNext: TButton
+      OnTap = btnNextTap
+      Align = Client
+      Size.Width = 320.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Continuar'
+      OnClick = btnNextClick
+    end
+  end
+  object vsbBody: TVertScrollBox
+    Align = Client
+    Padding.Left = 40.000000000000000000
+    Padding.Right = 40.000000000000000000
+    Size.Width = 400.000000000000000000
+    Size.Height = 464.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Viewport.Width = 400.000000000000000000
+    Viewport.Height = 464.000000000000000000
+    object lytGender: TLayout
+      Align = Top
+      Margins.Bottom = 10.000000000000000000
+      Position.X = 40.000000000000000000
+      Size.Width = 320.000000000000000000
+      Size.Height = 180.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object lblGender: TLabel
+        Align = Top
+        AutoSize = True
+        StyledSettings = [Style]
+        HitTest = True
+        Margins.Bottom = 10.000000000000000000
+        Size.Width = 320.000000000000000000
+        Size.Height = 18.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Poppins'
+        TextSettings.FontColor = xFF121212
+        Text = 'Sexo*'
+        TabOrder = 4
+      end
+      object lblGenderAlert: TLabel
+        Align = Top
+        AutoSize = True
+        StyledSettings = []
+        Position.Y = 154.000000000000000000
+        Size.Width = 320.000000000000000000
+        Size.Height = 18.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Poppins'
+        TextSettings.FontColor = xFFD84848
+        TabOrder = 3
+      end
+      object rdbFemale: TRadioButton
+        Align = Top
+        StyledSettings = [Style]
+        GroupName = 'Gender'
+        Margins.Bottom = 10.000000000000000000
+        Position.Y = 28.000000000000000000
+        Size.Width = 320.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'Feminino'
+        TextSettings.Font.Family = 'Poppins'
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.FontColor = xFF121212
+        OnChange = rdbFemaleChange
+        OnKeyDown = rdbFemaleKeyDown
+        OnExit = rdbFemaleExit
+      end
+      object rdbOther: TRadioButton
+        Align = Top
+        StyledSettings = [Style]
+        GroupName = 'Gender'
+        Margins.Bottom = 10.000000000000000000
+        Position.Y = 112.000000000000000000
+        Size.Width = 320.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Text = 'Outro'
+        TextSettings.Font.Family = 'Poppins'
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.FontColor = xFF121212
+        OnChange = rdbOtherChange
+        OnKeyDown = rdbOtherKeyDown
+        OnExit = rdbOtherExit
+      end
+      object rdbMale: TRadioButton
+        Align = Top
+        StyledSettings = [Style]
+        GroupName = 'Gender'
+        Margins.Bottom = 10.000000000000000000
+        Position.Y = 70.000000000000000000
+        Size.Width = 320.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'Masculino'
+        TextSettings.Font.Family = 'Poppins'
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.FontColor = xFF121212
+        OnChange = rdbMaleChange
+        OnKeyDown = rdbMaleKeyDown
+        OnExit = rdbMaleExit
+      end
+    end
+    object lytBirthday: TLayout
+      Align = Top
+      Margins.Bottom = 10.000000000000000000
+      Position.X = 40.000000000000000000
+      Position.Y = 190.000000000000000000
+      Size.Width = 320.000000000000000000
+      Size.Height = 68.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object lblBirthday: TLabel
+        Align = Top
+        AutoSize = True
+        StyledSettings = [Style]
+        HitTest = True
+        Size.Width = 320.000000000000000000
+        Size.Height = 18.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Poppins'
+        TextSettings.FontColor = xFF121212
+        Text = 'Nascimento*'
+        TabOrder = 1
+      end
+      object lblBirthdayAlert: TLabel
+        Align = Top
+        AutoSize = True
+        StyledSettings = []
+        Position.Y = 50.000000000000000000
+        Size.Width = 320.000000000000000000
+        Size.Height = 18.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Poppins'
+        TextSettings.FontColor = xFFD84848
+        TabOrder = 0
+      end
+      object edtBirthday: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 2
+        KeyboardType = NumberPad
+        ReturnKeyType = Next
+        TextSettings.Font.Family = 'Inter'
+        TextSettings.Font.Size = 16.000000000000000000
+        TextSettings.FontColor = xFF121212
+        Position.Y = 18.000000000000000000
+        Size.Width = 320.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'Sua data de nascimento'
+        StyledSettings = [Style]
+        OnChange = edtBirthdayChange
+        OnTyping = edtBirthdayTyping
+        OnKeyDown = edtBirthdayKeyDown
+        OnEnter = edtBirthdayEnter
+        OnExit = edtBirthdayExit
+      end
+    end
+    object lytHeight: TLayout
+      Align = Top
+      Margins.Bottom = 10.000000000000000000
+      Position.X = 40.000000000000000000
+      Position.Y = 268.000000000000000000
+      Size.Width = 320.000000000000000000
+      Size.Height = 68.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      object edtHeight: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 0
+        KeyboardType = NumbersAndPunctuation
+        ReturnKeyType = Next
+        TextSettings.Font.Family = 'Inter'
+        TextSettings.Font.Size = 16.000000000000000000
+        TextSettings.FontColor = xFF121212
+        Position.Y = 18.000000000000000000
+        Size.Width = 320.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'Sua altura'
+        StyledSettings = [Style]
+        KillFocusByReturn = True
+        OnChange = edtHeightChange
+        OnTyping = edtHeightTyping
+        OnKeyDown = edtHeightKeyDown
+        OnEnter = edtHeightEnter
+        OnExit = edtHeightExit
+      end
+      object lblHeight: TLabel
+        Align = Top
+        AutoSize = True
+        StyledSettings = [Style]
+        HitTest = True
+        Size.Width = 320.000000000000000000
+        Size.Height = 18.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Poppins'
+        TextSettings.FontColor = xFF121212
+        Text = 'Altura*'
+        TabOrder = 2
+      end
+      object lblHeightAlert: TLabel
+        Align = Top
+        AutoSize = True
+        StyledSettings = []
+        Position.Y = 50.000000000000000000
+        Size.Width = 320.000000000000000000
+        Size.Height = 18.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Poppins'
+        TextSettings.FontColor = xFFD84848
+        TabOrder = 1
+      end
+    end
+    object lytWeight: TLayout
+      Align = Top
+      Margins.Bottom = 10.000000000000000000
+      Position.X = 40.000000000000000000
+      Position.Y = 346.000000000000000000
+      Size.Width = 320.000000000000000000
+      Size.Height = 68.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      object edtWeight: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 0
+        KeyboardType = DecimalNumberPad
+        ReturnKeyType = Next
+        TextSettings.Font.Family = 'Inter'
+        TextSettings.Font.Size = 16.000000000000000000
+        TextSettings.FontColor = xFF121212
+        Position.Y = 18.000000000000000000
+        Size.Width = 320.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'Seu peso'
+        StyledSettings = [Style]
+        KillFocusByReturn = True
+        OnChange = edtWeightChange
+        OnTyping = edtWeightTyping
+        OnKeyDown = edtWeightKeyDown
+        OnEnter = edtWeightEnter
+        OnExit = edtWeightExit
+      end
+      object lblWeight: TLabel
+        Align = Top
+        AutoSize = True
+        StyledSettings = [Style]
+        HitTest = True
+        Size.Width = 320.000000000000000000
+        Size.Height = 18.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Poppins'
+        TextSettings.FontColor = xFF121212
+        Text = 'Peso*'
+        TabOrder = 2
+      end
+      object lblWeightAlert: TLabel
+        Align = Top
+        AutoSize = True
+        StyledSettings = []
+        Position.Y = 50.000000000000000000
+        Size.Width = 320.000000000000000000
+        Size.Height = 18.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Poppins'
+        TextSettings.FontColor = xFFD84848
+        TabOrder = 1
+      end
+    end
+  end
+end

@@ -1,0 +1,462 @@
+object AddressView: TAddressView
+  Size.Width = 400.000000000000000000
+  Size.Height = 600.000000000000000000
+  Size.PlatformDefault = False
+  object lytHeader: TLayout
+    Align = Top
+    Margins.Top = 10.000000000000000000
+    Margins.Bottom = 10.000000000000000000
+    Position.Y = 10.000000000000000000
+    Size.Width = 400.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object rctBgHeader: TRectangle
+      Align = Contents
+      Fill.Kind = None
+      Sides = [Bottom]
+      Size.Width = 400.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Color = xFFF2F2F2
+    end
+    object lytHeaderControls: TLayout
+      Align = Client
+      Padding.Left = 20.000000000000000000
+      Padding.Right = 40.000000000000000000
+      Size.Width = 400.000000000000000000
+      Size.Height = 43.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object btnBack: TButton
+        OnTap = btnBackTap
+        Align = MostLeft
+        Position.X = 20.000000000000000000
+        Size.Width = 20.000000000000000000
+        Size.Height = 43.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'arrowlefttoolbutton'
+        TabOrder = 1
+        OnClick = btnBackClick
+      end
+      object lblTitle: TLabel
+        Align = Client
+        AutoSize = True
+        StyledSettings = []
+        Size.Width = 320.000000000000000000
+        Size.Height = 43.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Poppins'
+        TextSettings.Font.Size = 20.000000000000000000
+        TextSettings.FontColor = xFF121212
+        TextSettings.HorzAlign = Center
+        Text = 'Endere'#231'o'
+        TabOrder = 0
+      end
+    end
+    object lytHeaderProgress: TLayout
+      Align = Bottom
+      Position.Y = 43.000000000000000000
+      Size.Width = 400.000000000000000000
+      Size.Height = 5.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      object rctBgProgress: TRectangle
+        Align = Contents
+        Fill.Color = xFFECECEC
+        Size.Width = 400.000000000000000000
+        Size.Height = 5.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        object rctProgress: TRectangle
+          Align = Left
+          Fill.Color = xFFB6B6B6
+          Size.Width = 0.000000000000000000
+          Size.Height = 5.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Kind = None
+        end
+      end
+    end
+  end
+  object lytFooter: TLayout
+    Align = Bottom
+    Padding.Left = 40.000000000000000000
+    Padding.Right = 40.000000000000000000
+    Margins.Bottom = 20.000000000000000000
+    Position.Y = 532.000000000000000000
+    Size.Width = 400.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object btnNext: TButton
+      OnTap = btnNextTap
+      Align = Client
+      Size.Width = 320.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Continuar'
+      OnClick = btnNextClick
+    end
+  end
+  object vsbBody: TVertScrollBox
+    Align = Client
+    Padding.Left = 40.000000000000000000
+    Padding.Right = 40.000000000000000000
+    Size.Width = 400.000000000000000000
+    Size.Height = 464.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Viewport.Width = 400.000000000000000000
+    Viewport.Height = 464.000000000000000000
+    object lytCep: TLayout
+      Align = Top
+      Margins.Bottom = 10.000000000000000000
+      Position.X = 40.000000000000000000
+      Size.Width = 320.000000000000000000
+      Size.Height = 68.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object edtCep: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 0
+        KeyboardType = NumberPad
+        ReturnKeyType = Next
+        MaxLength = 100
+        TextSettings.Font.Family = 'Inter'
+        TextSettings.Font.Size = 16.000000000000000000
+        TextSettings.FontColor = xFF121212
+        Position.Y = 18.000000000000000000
+        Size.Width = 320.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = '00000-000'
+        StyledSettings = [Style]
+        KillFocusByReturn = True
+        OnChange = edtCepChange
+        OnTyping = edtCepTyping
+        OnKeyDown = edtCepKeyDown
+        OnEnter = edtCepEnter
+        OnExit = edtCepExit
+      end
+      object lblCep: TLabel
+        Align = Top
+        AutoSize = True
+        StyledSettings = [Style]
+        HitTest = True
+        Size.Width = 320.000000000000000000
+        Size.Height = 18.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Poppins'
+        TextSettings.FontColor = xFF121212
+        Text = 'CEP*'
+        TabOrder = 2
+      end
+      object lblCepAlert: TLabel
+        Align = Top
+        AutoSize = True
+        StyledSettings = []
+        Position.Y = 50.000000000000000000
+        Size.Width = 320.000000000000000000
+        Size.Height = 18.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Poppins'
+        TextSettings.FontColor = xFFD84848
+        TabOrder = 1
+      end
+    end
+    object lytAddress: TLayout
+      Align = Top
+      Margins.Bottom = 10.000000000000000000
+      Position.X = 40.000000000000000000
+      Position.Y = 78.000000000000000000
+      Size.Width = 320.000000000000000000
+      Size.Height = 68.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object edtAddress: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 0
+        KeyboardType = Alphabet
+        ReturnKeyType = Next
+        MaxLength = 100
+        TextSettings.Font.Family = 'Inter'
+        TextSettings.Font.Size = 16.000000000000000000
+        TextSettings.FontColor = xFF121212
+        Position.Y = 18.000000000000000000
+        Size.Width = 320.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'Entre com o seu endere'#231'o'
+        StyledSettings = [Style]
+        KillFocusByReturn = True
+        OnChange = edtAddressChange
+        OnTyping = edtAddressTyping
+        OnKeyDown = edtAddressKeyDown
+        OnEnter = edtAddressEnter
+        OnExit = edtAddressExit
+      end
+      object lblAddress: TLabel
+        Align = Top
+        AutoSize = True
+        StyledSettings = [Style]
+        HitTest = True
+        Size.Width = 320.000000000000000000
+        Size.Height = 18.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Poppins'
+        TextSettings.FontColor = xFF121212
+        Text = 'Endere'#231'o*'
+        TabOrder = 2
+      end
+      object lblAddressAlert: TLabel
+        Align = Top
+        AutoSize = True
+        StyledSettings = []
+        Position.Y = 50.000000000000000000
+        Size.Width = 320.000000000000000000
+        Size.Height = 18.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Poppins'
+        TextSettings.FontColor = xFFD84848
+        TabOrder = 1
+      end
+    end
+    object lytDistrict: TLayout
+      Align = Top
+      Margins.Bottom = 10.000000000000000000
+      Position.X = 40.000000000000000000
+      Position.Y = 234.000000000000000000
+      Size.Width = 320.000000000000000000
+      Size.Height = 68.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      object edtDistrict: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 0
+        KeyboardType = Alphabet
+        ReturnKeyType = Next
+        MaxLength = 100
+        TextSettings.Font.Family = 'Inter'
+        TextSettings.Font.Size = 16.000000000000000000
+        TextSettings.FontColor = xFF121212
+        Position.Y = 18.000000000000000000
+        Size.Width = 320.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'Entre com o seu bairro'
+        StyledSettings = [Style]
+        KillFocusByReturn = True
+        OnChange = edtDistrictChange
+        OnTyping = edtDistrictTyping
+        OnKeyDown = edtDistrictKeyDown
+        OnEnter = edtDistrictEnter
+        OnExit = edtDistrictExit
+      end
+      object lblDistrict: TLabel
+        Align = Top
+        AutoSize = True
+        StyledSettings = [Style]
+        HitTest = True
+        Size.Width = 320.000000000000000000
+        Size.Height = 18.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Poppins'
+        TextSettings.FontColor = xFF121212
+        Text = 'Bairro*'
+        TabOrder = 2
+      end
+      object lblDistrictAlert: TLabel
+        Align = Top
+        AutoSize = True
+        StyledSettings = []
+        Position.Y = 50.000000000000000000
+        Size.Width = 320.000000000000000000
+        Size.Height = 18.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Poppins'
+        TextSettings.FontColor = xFFD84848
+        TabOrder = 1
+      end
+    end
+    object lytNumber: TLayout
+      Align = Top
+      Margins.Bottom = 10.000000000000000000
+      Position.X = 40.000000000000000000
+      Position.Y = 156.000000000000000000
+      Size.Width = 320.000000000000000000
+      Size.Height = 68.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      object edtNumber: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 0
+        KeyboardType = Alphabet
+        ReturnKeyType = Next
+        MaxLength = 100
+        TextSettings.Font.Family = 'Inter'
+        TextSettings.Font.Size = 16.000000000000000000
+        TextSettings.FontColor = xFF121212
+        Position.Y = 18.000000000000000000
+        Size.Width = 320.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'Entre com o n'#250'mero do endere'#231'o'
+        StyledSettings = [Style]
+        KillFocusByReturn = True
+        OnChange = edtNumberChange
+        OnTyping = edtNumberTyping
+        OnKeyDown = edtNumberKeyDown
+        OnEnter = edtNumberEnter
+        OnExit = edtNumberExit
+      end
+      object lblNumber: TLabel
+        Align = Top
+        AutoSize = True
+        StyledSettings = [Style]
+        HitTest = True
+        Size.Width = 320.000000000000000000
+        Size.Height = 18.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Poppins'
+        TextSettings.FontColor = xFF121212
+        Text = 'N'#250'mero*'
+        TabOrder = 2
+      end
+      object lblNumberAlert: TLabel
+        Align = Top
+        AutoSize = True
+        StyledSettings = []
+        Position.Y = 50.000000000000000000
+        Size.Width = 320.000000000000000000
+        Size.Height = 18.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Poppins'
+        TextSettings.FontColor = xFFD84848
+        TabOrder = 1
+      end
+    end
+    object lytCity: TLayout
+      Align = Top
+      Margins.Bottom = 10.000000000000000000
+      Position.X = 40.000000000000000000
+      Position.Y = 312.000000000000000000
+      Size.Width = 320.000000000000000000
+      Size.Height = 68.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+      object edtCity: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 0
+        KeyboardType = Alphabet
+        ReturnKeyType = Next
+        MaxLength = 100
+        TextSettings.Font.Family = 'Inter'
+        TextSettings.Font.Size = 16.000000000000000000
+        TextSettings.FontColor = xFF121212
+        Position.Y = 18.000000000000000000
+        Size.Width = 320.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'Entre com a sua cidade'
+        StyledSettings = [Style]
+        KillFocusByReturn = True
+        OnChange = edtCityChange
+        OnTyping = edtCityTyping
+        OnKeyDown = edtCityKeyDown
+        OnEnter = edtCityEnter
+        OnExit = edtCityExit
+      end
+      object lblCity: TLabel
+        Align = Top
+        AutoSize = True
+        StyledSettings = [Style]
+        HitTest = True
+        Size.Width = 320.000000000000000000
+        Size.Height = 18.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Poppins'
+        TextSettings.FontColor = xFF121212
+        Text = 'Cidade*'
+        TabOrder = 2
+      end
+      object lblCityAlert: TLabel
+        Align = Top
+        AutoSize = True
+        StyledSettings = []
+        Position.Y = 50.000000000000000000
+        Size.Width = 320.000000000000000000
+        Size.Height = 18.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Poppins'
+        TextSettings.FontColor = xFFD84848
+        TabOrder = 1
+      end
+    end
+    object lytUf: TLayout
+      Align = Top
+      Margins.Bottom = 10.000000000000000000
+      Position.X = 40.000000000000000000
+      Position.Y = 390.000000000000000000
+      Size.Width = 320.000000000000000000
+      Size.Height = 68.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 5
+      object edtUf: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 0
+        KeyboardType = Alphabet
+        ReturnKeyType = Next
+        MaxLength = 2
+        TextSettings.Font.Family = 'Inter'
+        TextSettings.Font.Size = 16.000000000000000000
+        TextSettings.FontColor = xFF121212
+        Position.Y = 18.000000000000000000
+        Size.Width = 320.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'Entre com a sua UF'
+        StyledSettings = [Style]
+        KillFocusByReturn = True
+        CharCase = ecUpperCase
+        OnChange = edtUfChange
+        OnTyping = edtUfTyping
+        OnKeyDown = edtUfKeyDown
+        OnEnter = edtUfEnter
+        OnExit = edtUfExit
+      end
+      object lblUf: TLabel
+        Align = Top
+        AutoSize = True
+        StyledSettings = [Style]
+        HitTest = True
+        Size.Width = 320.000000000000000000
+        Size.Height = 18.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Poppins'
+        TextSettings.FontColor = xFF121212
+        Text = 'UF*'
+        TabOrder = 2
+      end
+      object lblUfAlert: TLabel
+        Align = Top
+        AutoSize = True
+        StyledSettings = []
+        Position.Y = 50.000000000000000000
+        Size.Width = 320.000000000000000000
+        Size.Height = 18.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Poppins'
+        TextSettings.FontColor = xFFD84848
+        TabOrder = 1
+      end
+    end
+  end
+end

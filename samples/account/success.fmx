@@ -1,0 +1,57 @@
+object SuccessView: TSuccessView
+  Size.Width = 400.000000000000000000
+  Size.Height = 700.000000000000000000
+  Size.PlatformDefault = False
+  object lytMain: TLayout
+    Align = VertCenter
+    Margins.Left = 50.000000000000000000
+    Margins.Right = 50.000000000000000000
+    Position.X = 50.000000000000000000
+    Position.Y = 220.000000000000000000
+    Size.Width = 300.000000000000000000
+    Size.Height = 260.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object lblTitle: TLabel
+      Align = Top
+      AutoSize = True
+      StyledSettings = [Style]
+      Margins.Bottom = 12.000000000000000000
+      Size.Width = 300.000000000000000000
+      Size.Height = 60.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Family = 'Poppins'
+      TextSettings.Font.Size = 20.000000000000000000
+      TextSettings.FontColor = xFF121212
+      TextSettings.HorzAlign = Center
+      Text = 'Dados enviados com sucesso!'
+      TabOrder = 0
+    end
+    object lblSubTitle: TLabel
+      Align = Top
+      AutoSize = True
+      StyledSettings = [Style]
+      Margins.Bottom = 50.000000000000000000
+      Position.Y = 72.000000000000000000
+      Size.Width = 300.000000000000000000
+      Size.Height = 18.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Family = 'Poppins'
+      TextSettings.FontColor = xFFA5A5A5
+      TextSettings.HorzAlign = Center
+      Text = 'Agora '#233' s'#243' proseguir com o pr'#243'ximo cadastro.'
+      TabOrder = 1
+    end
+    object btnNext: TButton
+      OnTap = btnNextTap
+      Align = Top
+      Position.Y = 140.000000000000000000
+      Size.Width = 300.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'Pr'#243'ximo cadastro'
+      OnClick = btnNextClick
+    end
+  end
+end

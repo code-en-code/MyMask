@@ -1,0 +1,59 @@
+object WelcomeView: TWelcomeView
+  Size.Width = 400.000000000000000000
+  Size.Height = 600.000000000000000000
+  Size.PlatformDefault = False
+  object lytMain: TLayout
+    Align = VertCenter
+    Margins.Left = 50.000000000000000000
+    Margins.Right = 50.000000000000000000
+    Position.X = 50.000000000000000000
+    Position.Y = 170.000000000000000000
+    Size.Width = 300.000000000000000000
+    Size.Height = 260.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object lblTitle: TLabel
+      Align = Top
+      AutoSize = True
+      StyledSettings = [Style]
+      Margins.Bottom = 12.000000000000000000
+      Size.Width = 300.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Family = 'Poppins'
+      TextSettings.Font.Size = 20.000000000000000000
+      TextSettings.FontColor = xFF121212
+      TextSettings.HorzAlign = Center
+      Text = 'Bem vindo ao seu cadastro'
+      TabOrder = 0
+    end
+    object lblSubTitle: TLabel
+      Align = Top
+      AutoSize = True
+      StyledSettings = [Style]
+      Margins.Bottom = 68.000000000000000000
+      Position.Y = 42.000000000000000000
+      Size.Width = 300.000000000000000000
+      Size.Height = 36.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Family = 'Poppins'
+      TextSettings.FontColor = xFFA5A5A5
+      TextSettings.HorzAlign = Center
+      Text = 
+        'A seguir informe os dados necess'#225'rios para realizar o seu cadast' +
+        'ro.'
+      TabOrder = 1
+    end
+    object btnNext: TButton
+      OnTap = btnNextTap
+      Align = Top
+      Position.Y = 146.000000000000000000
+      Size.Width = 300.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'Continuar'
+      OnClick = btnNextClick
+    end
+  end
+end

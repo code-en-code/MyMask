@@ -1,0 +1,55 @@
+object SendView: TSendView
+  Size.Width = 400.000000000000000000
+  Size.Height = 700.000000000000000000
+  Size.PlatformDefault = False
+  object lytMain: TLayout
+    Align = VertCenter
+    Margins.Left = 50.000000000000000000
+    Margins.Right = 50.000000000000000000
+    Position.X = 50.000000000000000000
+    Position.Y = 297.000000000000000000
+    Size.Width = 300.000000000000000000
+    Size.Height = 106.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object lblTitle: TLabel
+      Align = Top
+      AutoSize = True
+      StyledSettings = [Style]
+      Margins.Bottom = 12.000000000000000000
+      Size.Width = 300.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Family = 'Poppins'
+      TextSettings.Font.Size = 20.000000000000000000
+      TextSettings.FontColor = xFF121212
+      TextSettings.HorzAlign = Center
+      Text = 'Enviando os dados...'
+      TabOrder = 0
+    end
+    object lblSubTitle: TLabel
+      Align = Top
+      AutoSize = True
+      StyledSettings = [Style]
+      Margins.Bottom = 20.000000000000000000
+      Position.Y = 42.000000000000000000
+      Size.Width = 300.000000000000000000
+      Size.Height = 18.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Family = 'Poppins'
+      TextSettings.FontColor = xFFA5A5A5
+      TextSettings.HorzAlign = Center
+      Text = 'Aguarde s'#227'o s'#243' alguns segundos.'
+      TabOrder = 1
+    end
+    object aniIndicator: TAniIndicator
+      Align = Top
+      Opacity = 0.500000000000000000
+      Position.Y = 80.000000000000000000
+      Size.Width = 300.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      Style = Circular
+    end
+  end
+end

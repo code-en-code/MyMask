@@ -1,0 +1,699 @@
+object ControlsView: TControlsView
+  Size.Width = 400.000000000000000000
+  Size.Height = 600.000000000000000000
+  Size.PlatformDefault = False
+  object lytHeader: TLayout
+    Align = Top
+    Padding.Left = 20.000000000000000000
+    Padding.Right = 40.000000000000000000
+    Margins.Top = 10.000000000000000000
+    Margins.Bottom = 10.000000000000000000
+    Position.Y = 10.000000000000000000
+    Size.Width = 400.000000000000000000
+    Size.Height = 160.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object lblTitle: TLabel
+      Align = Top
+      StyledSettings = []
+      Position.X = 20.000000000000000000
+      Size.Width = 340.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Family = 'Poppins'
+      TextSettings.Font.Size = 20.000000000000000000
+      TextSettings.FontColor = xFF121212
+      TextSettings.HorzAlign = Center
+      Text = 'MyMask'
+      TabOrder = 1
+    end
+    object lytValidation: TLayout
+      Align = Top
+      Margins.Left = 20.000000000000000000
+      Margins.Right = 16.000000000000000000
+      Margins.Bottom = 10.000000000000000000
+      Position.X = 40.000000000000000000
+      Position.Y = 48.000000000000000000
+      Size.Width = 304.000000000000000000
+      Size.Height = 34.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 23
+      object lblValidation: TLabel
+        Align = Client
+        StyledSettings = [Style]
+        Size.Width = 226.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Poppins'
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.FontColor = xFF121212
+        Text = 'Validar os dados'
+        TabOrder = 12
+      end
+      object swtValidation: TSwitch
+        Align = Right
+        IsChecked = False
+        Margins.Top = 4.000000000000000000
+        Margins.Bottom = 4.000000000000000000
+        Position.X = 226.000000000000000000
+        Position.Y = 4.000000000000000000
+        Size.Width = 78.000000000000000000
+        Size.Height = 26.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 13
+        OnSwitch = swtValidationSwitch
+      end
+    end
+    object lytName: TLayout
+      Align = Top
+      Margins.Left = 20.000000000000000000
+      Margins.Right = 16.000000000000000000
+      Margins.Bottom = 10.000000000000000000
+      Position.X = 40.000000000000000000
+      Position.Y = 92.000000000000000000
+      Size.Width = 304.000000000000000000
+      Size.Height = 68.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object edtName: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 0
+        KeyboardType = Alphabet
+        ReturnKeyType = Next
+        TextSettings.Font.Family = 'Inter'
+        TextSettings.Font.Size = 16.000000000000000000
+        TextSettings.FontColor = xFF121212
+        Position.Y = 18.000000000000000000
+        Size.Width = 304.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'Digite aqui...'
+        StyledSettings = [Style]
+        KillFocusByReturn = True
+        OnChange = edtNameChange
+        OnTyping = edtNameTyping
+        OnKeyDown = edtNameKeyDown
+        OnEnter = edtNameEnter
+        OnExit = edtNameExit
+      end
+      object lblName: TLabel
+        OnTap = lblNameTap
+        Align = Top
+        AutoSize = True
+        StyledSettings = [Style]
+        HitTest = True
+        Size.Width = 304.000000000000000000
+        Size.Height = 18.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Poppins'
+        TextSettings.FontColor = xFF121212
+        Text = 'Entre com os dados'
+        TabOrder = 2
+        OnClick = lblNameClick
+      end
+      object lblNameAlert: TLabel
+        Align = Top
+        AutoSize = True
+        StyledSettings = []
+        Position.Y = 50.000000000000000000
+        Size.Width = 304.000000000000000000
+        Size.Height = 18.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Poppins'
+        TextSettings.FontColor = xFFD84848
+        TabOrder = 1
+      end
+    end
+  end
+  object lytFooter: TLayout
+    Align = Bottom
+    Padding.Left = 40.000000000000000000
+    Padding.Right = 40.000000000000000000
+    Margins.Bottom = 20.000000000000000000
+    Position.Y = 532.000000000000000000
+    Size.Width = 400.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    TabStop = False
+    object btnNext: TButton
+      OnTap = btnNextTap
+      Align = Client
+      Size.Width = 320.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Continuar'
+      OnClick = btnNextClick
+    end
+  end
+  object vsbBody: TVertScrollBox
+    Align = Client
+    Padding.Left = 40.000000000000000000
+    Padding.Right = 40.000000000000000000
+    Margins.Bottom = 10.000000000000000000
+    Size.Width = 400.000000000000000000
+    Size.Height = 342.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Viewport.Width = 384.000000000000000000
+    Viewport.Height = 342.000000000000000000
+    object lytCnpj: TLayout
+      Align = Top
+      Margins.Bottom = 10.000000000000000000
+      Position.X = 40.000000000000000000
+      Size.Width = 304.000000000000000000
+      Size.Height = 34.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 41
+      object rdbCnpj: TRadioButton
+        Align = Left
+        StyledSettings = [Style]
+        Size.Width = 81.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 12
+        Text = 'CNPJ'
+        TextSettings.Font.Family = 'Poppins'
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.FontColor = xFF121212
+        OnChange = rdbCnpjChange
+      end
+    end
+    object lytCpf: TLayout
+      Align = Top
+      Margins.Bottom = 10.000000000000000000
+      Position.X = 40.000000000000000000
+      Position.Y = 44.000000000000000000
+      Size.Width = 304.000000000000000000
+      Size.Height = 34.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 40
+      object rdbCpf: TRadioButton
+        Align = Left
+        StyledSettings = [Style]
+        Size.Width = 65.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 12
+        Text = 'CPF'
+        TextSettings.Font.Family = 'Poppins'
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.FontColor = xFF121212
+        OnChange = rdbCnpjChange
+      end
+    end
+    object lytCpfCnpj: TLayout
+      Align = Top
+      Margins.Bottom = 10.000000000000000000
+      Position.X = 40.000000000000000000
+      Position.Y = 88.000000000000000000
+      Size.Width = 304.000000000000000000
+      Size.Height = 34.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 39
+      object rdbCpfCnpj: TRadioButton
+        Align = Left
+        StyledSettings = [Style]
+        Size.Width = 121.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 12
+        Text = 'CPF ou CNPJ'
+        TextSettings.Font.Family = 'Poppins'
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.FontColor = xFF121212
+        OnChange = rdbCnpjChange
+      end
+    end
+    object lytIe: TLayout
+      Align = Top
+      Margins.Bottom = 10.000000000000000000
+      Position.X = 40.000000000000000000
+      Position.Y = 132.000000000000000000
+      Size.Width = 304.000000000000000000
+      Size.Height = 34.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 21
+      object rdbIe: TRadioButton
+        Align = Client
+        StyledSettings = [Style]
+        Size.Width = 154.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        Text = 'IE'
+        TextSettings.Font.Family = 'Poppins'
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.FontColor = xFF121212
+        OnChange = rdbCnpjChange
+      end
+      object cmbUf: TComboBox
+        Align = MostRight
+        Items.Strings = (
+          'N'#227'o informado'
+          'AC'
+          'AL'
+          'AM'
+          'AP'
+          'BA'
+          'CE'
+          'DF'
+          'ES'
+          'GO'
+          'MA'
+          'MG'
+          'MS'
+          'MT'
+          'PA'
+          'PB'
+          'PE'
+          'PI'
+          'PR'
+          'RJ'
+          'RN'
+          'RO'
+          'RR'
+          'RS'
+          'SC'
+          'SE'
+          'SP'
+          'TO')
+        ItemIndex = 0
+        Position.X = 154.000000000000000000
+        Size.Width = 150.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        OnMouseWheel = cmbUfMouseWheel
+      end
+    end
+    object lytCep: TLayout
+      Align = Top
+      Margins.Bottom = 10.000000000000000000
+      Position.X = 40.000000000000000000
+      Position.Y = 176.000000000000000000
+      Size.Width = 304.000000000000000000
+      Size.Height = 34.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 38
+      object rdbCep: TRadioButton
+        Align = Left
+        StyledSettings = [Style]
+        Size.Width = 81.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 12
+        Text = 'CEP'
+        TextSettings.Font.Family = 'Poppins'
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.FontColor = xFF121212
+        OnChange = rdbCnpjChange
+      end
+    end
+    object lytTelephone: TLayout
+      Align = Top
+      Margins.Bottom = 10.000000000000000000
+      Position.X = 40.000000000000000000
+      Position.Y = 220.000000000000000000
+      Size.Width = 304.000000000000000000
+      Size.Height = 34.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 37
+      object rdbTelephone: TRadioButton
+        Align = Left
+        StyledSettings = [Style]
+        Size.Width = 121.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 12
+        Text = 'Telefone fixo'
+        TextSettings.Font.Family = 'Poppins'
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.FontColor = xFF121212
+        OnChange = rdbCnpjChange
+      end
+    end
+    object lytCellPhone: TLayout
+      Align = Top
+      Margins.Bottom = 10.000000000000000000
+      Position.X = 40.000000000000000000
+      Position.Y = 264.000000000000000000
+      Size.Width = 304.000000000000000000
+      Size.Height = 34.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 22
+      object rdbCellPhone: TRadioButton
+        Align = Left
+        StyledSettings = [Style]
+        Size.Width = 89.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 12
+        Text = 'Celular'
+        TextSettings.Font.Family = 'Poppins'
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.FontColor = xFF121212
+        OnChange = rdbCnpjChange
+      end
+    end
+    object lytTelephoneCellPhone: TLayout
+      Align = Top
+      Margins.Bottom = 10.000000000000000000
+      Position.X = 40.000000000000000000
+      Position.Y = 308.000000000000000000
+      Size.Width = 304.000000000000000000
+      Size.Height = 34.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 36
+      object rdbTelephoneCellPhone: TRadioButton
+        Align = Left
+        StyledSettings = [Style]
+        Size.Width = 193.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 12
+        Text = 'Telefone fixo ou Celular'
+        TextSettings.Font.Family = 'Poppins'
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.FontColor = xFF121212
+        OnChange = rdbCnpjChange
+      end
+    end
+    object lytPis: TLayout
+      Align = Top
+      Margins.Bottom = 10.000000000000000000
+      Position.X = 40.000000000000000000
+      Position.Y = 396.000000000000000000
+      Size.Width = 304.000000000000000000
+      Size.Height = 34.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 24
+      object rdbPis: TRadioButton
+        Align = Left
+        StyledSettings = [Style]
+        Size.Width = 65.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 12
+        Text = 'PIS'
+        TextSettings.Font.Family = 'Poppins'
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.FontColor = xFF121212
+        OnChange = rdbCnpjChange
+      end
+    end
+    object lytCard: TLayout
+      Align = Top
+      Margins.Bottom = 10.000000000000000000
+      Position.X = 40.000000000000000000
+      Position.Y = 352.000000000000000000
+      Size.Width = 304.000000000000000000
+      Size.Height = 34.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 23
+      object rdbCard: TRadioButton
+        Align = Left
+        StyledSettings = [Style]
+        Size.Width = 89.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 12
+        Text = 'Cart'#227'o'
+        TextSettings.Font.Family = 'Poppins'
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.FontColor = xFF121212
+        OnChange = rdbCnpjChange
+      end
+    end
+    object lytGtin: TLayout
+      Align = Top
+      Margins.Bottom = 10.000000000000000000
+      Position.X = 40.000000000000000000
+      Position.Y = 440.000000000000000000
+      Size.Width = 304.000000000000000000
+      Size.Height = 34.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 35
+      object rdbGtin: TRadioButton
+        Align = Left
+        StyledSettings = [Style]
+        Size.Width = 81.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 12
+        Text = 'GTIN'
+        TextSettings.Font.Family = 'Poppins'
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.FontColor = xFF121212
+        OnChange = rdbCnpjChange
+      end
+    end
+    object lytRenavam: TLayout
+      Align = Top
+      Margins.Bottom = 10.000000000000000000
+      Position.X = 40.000000000000000000
+      Position.Y = 484.000000000000000000
+      Size.Width = 304.000000000000000000
+      Size.Height = 34.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 34
+      object rdbRenavam: TRadioButton
+        Align = Left
+        StyledSettings = [Style]
+        Size.Width = 105.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 12
+        Text = 'Renavam'
+        TextSettings.Font.Family = 'Poppins'
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.FontColor = xFF121212
+        OnChange = rdbCnpjChange
+      end
+    end
+    object lytCnh: TLayout
+      Align = Top
+      Margins.Bottom = 10.000000000000000000
+      Position.X = 40.000000000000000000
+      Position.Y = 528.000000000000000000
+      Size.Width = 304.000000000000000000
+      Size.Height = 34.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 33
+      object rdbCnh: TRadioButton
+        Align = Left
+        StyledSettings = [Style]
+        Size.Width = 65.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 12
+        Text = 'CNH'
+        TextSettings.Font.Family = 'Poppins'
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.FontColor = xFF121212
+        OnChange = rdbCnpjChange
+      end
+    end
+    object lytLicensePlate: TLayout
+      Align = Top
+      Margins.Bottom = 10.000000000000000000
+      Position.X = 40.000000000000000000
+      Position.Y = 572.000000000000000000
+      Size.Width = 304.000000000000000000
+      Size.Height = 34.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 32
+      object rdbLicensePlate: TRadioButton
+        Align = Left
+        StyledSettings = [Style]
+        Size.Width = 137.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 12
+        Text = 'Placa veicular'
+        TextSettings.Font.Family = 'Poppins'
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.FontColor = xFF121212
+        OnChange = rdbLicensePlateChange
+      end
+    end
+    object lytNcm: TLayout
+      Align = Top
+      Margins.Bottom = 10.000000000000000000
+      Position.X = 40.000000000000000000
+      Position.Y = 616.000000000000000000
+      Size.Width = 304.000000000000000000
+      Size.Height = 34.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 31
+      object rdbNcm: TRadioButton
+        Align = Left
+        StyledSettings = [Style]
+        Size.Width = 65.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 12
+        Text = 'NCM'
+        TextSettings.Font.Family = 'Poppins'
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.FontColor = xFF121212
+        OnChange = rdbCnpjChange
+      end
+    end
+    object lytCest: TLayout
+      Align = Top
+      Margins.Bottom = 10.000000000000000000
+      Position.X = 40.000000000000000000
+      Position.Y = 660.000000000000000000
+      Size.Width = 304.000000000000000000
+      Size.Height = 34.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 30
+      object rdbCest: TRadioButton
+        Align = Left
+        StyledSettings = [Style]
+        Size.Width = 81.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 12
+        Text = 'CEST'
+        TextSettings.Font.Family = 'Poppins'
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.FontColor = xFF121212
+        OnChange = rdbCnpjChange
+      end
+    end
+    object lytDate: TLayout
+      Align = Top
+      Margins.Bottom = 10.000000000000000000
+      Position.X = 40.000000000000000000
+      Position.Y = 704.000000000000000000
+      Size.Width = 304.000000000000000000
+      Size.Height = 34.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 29
+      object rdbDate: TRadioButton
+        Align = Left
+        StyledSettings = [Style]
+        Size.Width = 65.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 12
+        Text = 'Data'
+        TextSettings.Font.Family = 'Poppins'
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.FontColor = xFF121212
+        OnChange = rdbCnpjChange
+      end
+    end
+    object lytInteger: TLayout
+      Align = Top
+      Margins.Bottom = 10.000000000000000000
+      Position.X = 40.000000000000000000
+      Position.Y = 748.000000000000000000
+      Size.Width = 304.000000000000000000
+      Size.Height = 34.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 28
+      object rdbInteger: TRadioButton
+        Align = Left
+        StyledSettings = [Style]
+        Size.Width = 81.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 12
+        Text = 'Inteiro'
+        TextSettings.Font.Family = 'Poppins'
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.FontColor = xFF121212
+        OnChange = rdbCnpjChange
+      end
+    end
+    object lytFloat: TLayout
+      Align = Top
+      Margins.Bottom = 10.000000000000000000
+      Position.X = 40.000000000000000000
+      Position.Y = 792.000000000000000000
+      Size.Width = 304.000000000000000000
+      Size.Height = 34.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 27
+      object rdbFloat: TRadioButton
+        Align = Left
+        StyledSettings = [Style]
+        Size.Width = 89.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 12
+        Text = 'Decimal'
+        TextSettings.Font.Family = 'Poppins'
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.FontColor = xFF121212
+        OnChange = rdbCnpjChange
+      end
+    end
+    object lytCurrency: TLayout
+      Align = Top
+      Margins.Bottom = 10.000000000000000000
+      Position.X = 40.000000000000000000
+      Position.Y = 836.000000000000000000
+      Size.Width = 304.000000000000000000
+      Size.Height = 34.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 26
+      object rdbCurrency: TRadioButton
+        Align = Left
+        StyledSettings = [Style]
+        Size.Width = 81.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 12
+        Text = 'Moeda'
+        TextSettings.Font.Family = 'Poppins'
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.FontColor = xFF121212
+        OnChange = rdbCnpjChange
+      end
+    end
+    object lytCustom: TLayout
+      Align = Top
+      Margins.Bottom = 10.000000000000000000
+      Position.X = 40.000000000000000000
+      Position.Y = 880.000000000000000000
+      Size.Width = 304.000000000000000000
+      Size.Height = 34.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 25
+      object rdbCustom: TRadioButton
+        Align = Client
+        StyledSettings = [Style]
+        Size.Width = 154.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 12
+        Text = 'Personalizado'
+        TextSettings.Font.Family = 'Poppins'
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.FontColor = xFF121212
+        OnChange = rdbCnpjChange
+      end
+      object edtCustom: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = MostRight
+        TabOrder = 16
+        Text = '##-#-####'
+        TextSettings.Font.Size = 13.000000000000000000
+        TextSettings.FontColor = xFF464646
+        Position.X = 154.000000000000000000
+        Size.Width = 150.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        StyledSettings = [Family, Style]
+        OnEnter = edtCustomEnter
+        OnExit = edtCustomExit
+      end
+    end
+  end
+end

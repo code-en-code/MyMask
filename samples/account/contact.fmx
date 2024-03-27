@@ -1,0 +1,288 @@
+object ContactView: TContactView
+  Size.Width = 400.000000000000000000
+  Size.Height = 600.000000000000000000
+  Size.PlatformDefault = False
+  object lytHeader: TLayout
+    Align = Top
+    Margins.Top = 10.000000000000000000
+    Margins.Bottom = 10.000000000000000000
+    Position.Y = 10.000000000000000000
+    Size.Width = 400.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object rctBgHeader: TRectangle
+      Align = Contents
+      Fill.Kind = None
+      Sides = [Bottom]
+      Size.Width = 400.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Color = xFFF2F2F2
+    end
+    object lytHeaderControls: TLayout
+      Align = Client
+      Padding.Left = 20.000000000000000000
+      Padding.Right = 40.000000000000000000
+      Size.Width = 400.000000000000000000
+      Size.Height = 43.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object btnBack: TButton
+        OnTap = btnBackTap
+        Align = MostLeft
+        Position.X = 20.000000000000000000
+        Size.Width = 20.000000000000000000
+        Size.Height = 43.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'arrowlefttoolbutton'
+        TabOrder = 1
+        OnClick = btnBackClick
+      end
+      object lblTitle: TLabel
+        Align = Client
+        AutoSize = True
+        StyledSettings = []
+        Size.Width = 320.000000000000000000
+        Size.Height = 43.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Poppins'
+        TextSettings.Font.Size = 20.000000000000000000
+        TextSettings.FontColor = xFF121212
+        TextSettings.HorzAlign = Center
+        Text = 'Contatos'
+        TabOrder = 0
+      end
+    end
+    object lytHeaderProgress: TLayout
+      Align = Bottom
+      Position.Y = 43.000000000000000000
+      Size.Width = 400.000000000000000000
+      Size.Height = 5.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      object rctBgProgress: TRectangle
+        Align = Contents
+        Fill.Color = xFFECECEC
+        Size.Width = 400.000000000000000000
+        Size.Height = 5.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        object rctProgress: TRectangle
+          Align = Left
+          Fill.Color = xFFB6B6B6
+          Size.Width = 0.000000000000000000
+          Size.Height = 5.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Kind = None
+        end
+      end
+    end
+  end
+  object lytFooter: TLayout
+    Align = Bottom
+    Padding.Left = 40.000000000000000000
+    Padding.Right = 40.000000000000000000
+    Margins.Bottom = 20.000000000000000000
+    Position.Y = 532.000000000000000000
+    Size.Width = 400.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object btnNext: TButton
+      OnTap = btnNextTap
+      Align = Client
+      Size.Width = 320.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Continuar'
+      OnClick = btnNextClick
+    end
+  end
+  object vsbBody: TVertScrollBox
+    Align = Client
+    Padding.Left = 40.000000000000000000
+    Padding.Right = 40.000000000000000000
+    Size.Width = 400.000000000000000000
+    Size.Height = 464.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Viewport.Width = 400.000000000000000000
+    Viewport.Height = 464.000000000000000000
+    object lytEmail: TLayout
+      Align = Top
+      Margins.Bottom = 10.000000000000000000
+      Position.X = 40.000000000000000000
+      Size.Width = 320.000000000000000000
+      Size.Height = 68.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object edtEmail: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 0
+        KeyboardType = EmailAddress
+        ReturnKeyType = Next
+        MaxLength = 255
+        TextSettings.Font.Family = 'Inter'
+        TextSettings.Font.Size = 16.000000000000000000
+        TextSettings.FontColor = xFF121212
+        Position.Y = 18.000000000000000000
+        Size.Width = 320.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'Seu melhor email...'
+        StyledSettings = [Style]
+        KillFocusByReturn = True
+        CharCase = ecLowerCase
+        OnChange = edtEmailChange
+        OnTyping = edtEmailTyping
+        OnKeyDown = edtEmailKeyDown
+        OnEnter = edtEmailEnter
+        OnExit = edtEmailExit
+      end
+      object lblEmail: TLabel
+        Align = Top
+        AutoSize = True
+        StyledSettings = [Style]
+        HitTest = True
+        Size.Width = 320.000000000000000000
+        Size.Height = 18.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Poppins'
+        TextSettings.FontColor = xFF121212
+        Text = 'Email*'
+        TabOrder = 2
+      end
+      object lblEmailAlert: TLabel
+        Align = Top
+        AutoSize = True
+        StyledSettings = []
+        Position.Y = 50.000000000000000000
+        Size.Width = 320.000000000000000000
+        Size.Height = 18.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Poppins'
+        TextSettings.FontColor = xFFD84848
+        TabOrder = 1
+      end
+    end
+    object lytWhatsapp: TLayout
+      Align = Top
+      Margins.Bottom = 10.000000000000000000
+      Position.X = 40.000000000000000000
+      Position.Y = 78.000000000000000000
+      Size.Width = 320.000000000000000000
+      Size.Height = 68.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object edtWhatsapp: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 0
+        KeyboardType = PhonePad
+        ReturnKeyType = Next
+        MaxLength = 100
+        TextSettings.Font.Family = 'Inter'
+        TextSettings.Font.Size = 16.000000000000000000
+        TextSettings.FontColor = xFF121212
+        Position.Y = 18.000000000000000000
+        Size.Width = 320.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = '(00)00000-0000'
+        StyledSettings = [Style]
+        KillFocusByReturn = True
+        OnChange = edtWhatsappChange
+        OnTyping = edtWhatsappTyping
+        OnKeyDown = edtWhatsappKeyDown
+        OnEnter = edtWhatsappEnter
+        OnExit = edtWhatsappExit
+      end
+      object lblWhatsapp: TLabel
+        Align = Top
+        AutoSize = True
+        StyledSettings = [Style]
+        HitTest = True
+        Size.Width = 320.000000000000000000
+        Size.Height = 18.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Poppins'
+        TextSettings.FontColor = xFF121212
+        Text = 'WhatsApp*'
+        TabOrder = 2
+      end
+      object lblWhatsappAlert: TLabel
+        Align = Top
+        AutoSize = True
+        StyledSettings = []
+        Position.Y = 50.000000000000000000
+        Size.Width = 320.000000000000000000
+        Size.Height = 18.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Poppins'
+        TextSettings.FontColor = xFFD84848
+        TabOrder = 1
+      end
+    end
+    object lytPhone: TLayout
+      Align = Top
+      Margins.Bottom = 10.000000000000000000
+      Position.X = 40.000000000000000000
+      Position.Y = 156.000000000000000000
+      Size.Width = 320.000000000000000000
+      Size.Height = 68.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      object edtPhone: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 0
+        KeyboardType = PhonePad
+        ReturnKeyType = Next
+        MaxLength = 100
+        TextSettings.Font.Family = 'Inter'
+        TextSettings.Font.Size = 16.000000000000000000
+        TextSettings.FontColor = xFF121212
+        Position.Y = 18.000000000000000000
+        Size.Width = 320.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = '(00)0000-0000 ou (00)00000-0000'
+        StyledSettings = [Style]
+        KillFocusByReturn = True
+        OnChange = edtPhoneChange
+        OnTyping = edtPhoneTyping
+        OnKeyDown = edtPhoneKeyDown
+        OnEnter = edtPhoneEnter
+        OnExit = edtPhoneExit
+      end
+      object lblPhone: TLabel
+        Align = Top
+        AutoSize = True
+        StyledSettings = [Style]
+        HitTest = True
+        Size.Width = 320.000000000000000000
+        Size.Height = 18.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Poppins'
+        TextSettings.FontColor = xFF121212
+        Text = 'Telefone'
+        TabOrder = 2
+      end
+      object lblPhoneAlert: TLabel
+        Align = Top
+        AutoSize = True
+        StyledSettings = []
+        Position.Y = 50.000000000000000000
+        Size.Width = 320.000000000000000000
+        Size.Height = 18.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Poppins'
+        TextSettings.FontColor = xFFD84848
+        TabOrder = 1
+      end
+    end
+  end
+end

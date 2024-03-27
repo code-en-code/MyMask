@@ -1,0 +1,23 @@
+object IndexView: TIndexView
+  Left = 0
+  Top = 0
+  Caption = 'Your Registration'
+  ClientHeight = 600
+  ClientWidth = 400
+  Fill.Kind = Solid
+  Visible = True
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnDestroy = FormDestroy
+  OnShow = FormShow
+  OnVirtualKeyboardShown = FormVirtualKeyboardShown
+  DesignerMasterStyle = 0
+  object lytMain: TLayout
+    Align = Client
+    Size.Width = 400.000000000000000000
+    Size.Height = 600.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+  end
+end
